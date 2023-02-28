@@ -103,6 +103,9 @@ scoreboard objectives add amr.shield.portal.ps.cooldown dummy
 scoreboard objectives add amr.shield.a.coords dummy
 scoreboard objectives add amr.shield.b.coords dummy
 scoreboard objectives add amr.shield.c.coords dummy
+scoreboard objectives add amr.shield.d.coords dummy
+scoreboard objectives add amr.shield.e.coords dummy
+scoreboard objectives add amr.shield.f.coords dummy
 scoreboard objectives add amr.shield.staroff trigger
 scoreboard objectives add amr.skill.shield.bubble trigger
 scoreboard objectives add amr.shield.starCounter dummy
@@ -110,9 +113,15 @@ scoreboard objectives add amr.skill.shield.hate.reaction trigger
 scoreboard objectives add amr.skill.shield.set.warp.a trigger
 scoreboard objectives add amr.skill.shield.set.warp.b trigger
 scoreboard objectives add amr.skill.shield.set.warp.c trigger
+scoreboard objectives add amr.skill.shield.set.warp.d trigger
+scoreboard objectives add amr.skill.shield.set.warp.e trigger
+scoreboard objectives add amr.skill.shield.set.warp.f trigger
 scoreboard objectives add amr.skill.shield.warp.a trigger
 scoreboard objectives add amr.skill.shield.warp.b trigger
 scoreboard objectives add amr.skill.shield.warp.c trigger
+scoreboard objectives add amr.skill.shield.warp.d trigger
+scoreboard objectives add amr.skill.shield.warp.e trigger
+scoreboard objectives add amr.skill.shield.warp.f trigger
 scoreboard objectives add amr.shield.maiden trigger
 scoreboard objectives add amr.shield.blood trigger
 scoreboard objectives add amr.skill.shield.alert trigger

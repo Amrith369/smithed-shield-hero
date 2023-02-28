@@ -213,9 +213,15 @@ execute as @a[tag=amr.shield,predicate=amr-shield:shields/portal,scores={amr.shi
 execute as @a[tag=amr.shield,predicate=amr-shield:shields/portal,scores={amr.skill.shield.set.warp.a=1..}] run function amr-shield:skills/portal/save
 execute as @a[tag=amr.shield,predicate=amr-shield:shields/portal,scores={amr.skill.shield.set.warp.b=1..}] run function amr-shield:skills/portal/save
 execute as @a[tag=amr.shield,predicate=amr-shield:shields/portal,scores={amr.skill.shield.set.warp.c=1..}] run function amr-shield:skills/portal/save
+execute as @a[tag=amr.shield,predicate=amr-shield:shields/portal,scores={amr.skill.shield.set.warp.d=1..}] run function amr-shield:skills/portal/save
+execute as @a[tag=amr.shield,predicate=amr-shield:shields/portal,scores={amr.skill.shield.set.warp.e=1..}] run function amr-shield:skills/portal/save
+execute as @a[tag=amr.shield,predicate=amr-shield:shields/portal,scores={amr.skill.shield.set.warp.f=1..}] run function amr-shield:skills/portal/save
 execute as @a[tag=amr.shield,predicate=amr-shield:shields/portal,scores={amr.skill.shield.warp.a=1..}] run function amr-shield:skills/portal/warptotest
 execute as @a[tag=amr.shield,predicate=amr-shield:shields/portal,scores={amr.skill.shield.warp.b=1..}] run function amr-shield:skills/portal/warptotest
 execute as @a[tag=amr.shield,predicate=amr-shield:shields/portal,scores={amr.skill.shield.warp.c=1..}] run function amr-shield:skills/portal/warptotest
+execute as @a[tag=amr.shield,predicate=amr-shield:shields/portal,scores={amr.skill.shield.warp.d=1..}] run function amr-shield:skills/portal/warptotest
+execute as @a[tag=amr.shield,predicate=amr-shield:shields/portal,scores={amr.skill.shield.warp.e=1..}] run function amr-shield:skills/portal/warptotest
+execute as @a[tag=amr.shield,predicate=amr-shield:shields/portal,scores={amr.skill.shield.warp.f=1..}] run function amr-shield:skills/portal/warptotest
 ############################################################
 ################# GOLD TRANSFER ############################
 ############################################################
@@ -314,9 +320,15 @@ scoreboard players enable @a[tag=amr.shield,advancements={amr-shield:shields/por
 scoreboard players enable @a[tag=amr.shield,advancements={amr-shield:shields/portal=true}] amr.skill.shield.set.warp.a
 scoreboard players enable @a[tag=amr.shield,advancements={amr-shield:shields/portal=true}] amr.skill.shield.set.warp.b
 scoreboard players enable @a[tag=amr.shield,advancements={amr-shield:shields/portal=true}] amr.skill.shield.set.warp.c
+scoreboard players enable @a[tag=amr.shield,scores={amr.shield.portal.awakened=1..},advancements={amr-shield:shields/portal=true}] amr.skill.shield.set.warp.d
+scoreboard players enable @a[tag=amr.shield,scores={amr.shield.portal.rarity=1..},advancements={amr-shield:shields/portal=true}] amr.skill.shield.set.warp.e
+scoreboard players enable @a[tag=amr.shield,scores={amr.shield.portalprof=100},advancements={amr-shield:shields/portal=true}] amr.skill.shield.set.warp.f
 scoreboard players enable @a[tag=amr.shield,advancements={amr-shield:shields/portal=true}] amr.skill.shield.warp.a
 scoreboard players enable @a[tag=amr.shield,advancements={amr-shield:shields/portal=true}] amr.skill.shield.warp.b
 scoreboard players enable @a[tag=amr.shield,advancements={amr-shield:shields/portal=true}] amr.skill.shield.warp.c
+scoreboard players enable @a[tag=amr.shield,scores={amr.shield.portal.awakened=1..},advancements={amr-shield:shields/portal=true}] amr.skill.shield.warp.d
+scoreboard players enable @a[tag=amr.shield,scores={amr.shield.portal.rarity=1..},advancements={amr-shield:shields/portal=true}] amr.skill.shield.warp.e
+scoreboard players enable @a[tag=amr.shield,scores={amr.shield.portalprof=100},advancements={amr-shield:shields/portal=true}] amr.skill.shield.warp.f
 scoreboard players enable @a[tag=amr.shield,advancements={amr-shield:shields/portal=true}] amr.shield.hud.warp
 scoreboard players enable @a[tag=amr.shield] amr.shield.smelt
 scoreboard players enable @a[tag=amr.shield] amr.skill.shield.hate.reaction
