@@ -1,0 +1,61 @@
+[
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.max_health",
+        "name": "amr.shield.small.m.mh",
+        "amount": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "amr.shield.smallprof",
+          "scale": 0.005
+        },
+        "operation": "multiply_base",
+        "id": "b4ad5522-22b6-48b1-a943-838b894aa032",
+        "slot": "mainhand"
+      },
+      {
+        "attribute": "minecraft:generic.armor",
+        "name": "amr.shield.small.m.a",
+        "amount": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "amr.shield.smallprof",
+          "scale": 0.005
+        },
+        "operation": "multiply_base",
+        "id": "78a4c150-0a75-4aec-b712-ec18b8fceb07",
+        "slot": "mainhand"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "type": "minecraft:player",
+          "type_specific": {
+            "type": "player"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "mastery level: "
+      },
+      {
+        "score": {
+          "name": "@s",
+          "objective": "amr.shield.smallprof"
+        }
+      }
+    ],
+    "replace": false
+  }
+]

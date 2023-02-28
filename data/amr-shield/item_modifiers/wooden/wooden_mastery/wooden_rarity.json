@@ -1,0 +1,45 @@
+[
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.max_health",
+        "name": "amr.shield.wooden.r.mh",
+        "amount": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "amr.shield.wooden.rarity",
+          "scale": 0.2
+        },
+        "operation": "multiply_base",
+        "id": "384bf674-cfd0-420f-acfe-597433e46000",
+        "slot": "mainhand"
+      },
+      {
+        "attribute": "minecraft:generic.armor_toughness",
+        "name": "amr.shield.wooden.r.at",
+        "amount": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "amr.shield.wooden.rarity",
+          "scale": 0.2
+        },
+        "operation": "multiply_base",
+        "id": "efc4af4a-d05a-4544-af96-558959d3853c",
+        "slot": "mainhand"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "type": "minecraft:player",
+          "type_specific": {
+            "type": "player"
+          }
+        }
+      }
+    ]
+  }
+]

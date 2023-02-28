@@ -1,0 +1,61 @@
+[
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.max_health",
+        "name": "amr.shield.rope.m.mh",
+        "amount": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "amr.shield.ropeprof",
+          "scale": 0.005
+        },
+        "operation": "multiply_base",
+        "id": "cd557989-f66e-486d-b1bc-c1f5f963b6c2",
+        "slot": "mainhand"
+      },
+      {
+        "attribute": "minecraft:generic.armor_toughness",
+        "name": "amr.shield.rope.m.at",
+        "amount": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "amr.shield.ropeprof",
+          "scale": 0.005
+        },
+        "operation": "multiply_base",
+        "id": "ab6f8d4c-0324-4abd-ae1a-ac9996067097",
+        "slot": "mainhand"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "type": "minecraft:player",
+          "type_specific": {
+            "type": "player"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "mastery level: "
+      },
+      {
+        "score": {
+          "name": "@s",
+          "objective": "amr.shield.ropeprof"
+        }
+      }
+    ],
+    "replace": false
+  }
+]

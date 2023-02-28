@@ -1,0 +1,49 @@
+[
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.max_health",
+        "name": "amr.level.link.mh",
+        "amount": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "amr.shield.level.link",
+          "scale": 0.01
+        },
+        "operation": "multiply_base",
+        "id": "dd71543f-1ecc-43d0-a58d-2377b2823262",
+        "slot": "mainhand"
+      },
+      {
+        "attribute": "minecraft:generic.armor",
+        "name": "amr.level.link.at",
+        "amount": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "amr.shield.level.link",
+          "scale": 0.01
+        },
+        "operation": "multiply_base",
+        "id": "8bc4d3f5-c357-41ae-b52b-f025d46f9fa4",
+        "slot": "mainhand"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "type": "minecraft:player",
+          "type_specific": {
+            "type": "player",
+            "level": {
+              "min": 1,
+              "max": 1000
+            }
+          }
+        }
+      }
+    ]
+  }
+]

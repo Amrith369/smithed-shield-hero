@@ -1,0 +1,10 @@
+execute as @s[predicate=amr-shield:shields/small] run function amr-shield:levelup/energy/small_energy
+execute as @s[predicate=amr-shield:shields/leaf] run function amr-shield:levelup/energy/leaf_energy
+execute as @s[predicate=amr-shield:shields/rope] run function amr-shield:levelup/energy/rope_energy
+execute as @s[predicate=amr-shield:shields/pick] run function amr-shield:levelup/energy/pick_energy
+execute as @s[predicate=amr-shield:shields/ltm] run function amr-shield:levelup/energy/ltm_energy
+execute as @s[predicate=amr-shield:shields/viper] run function amr-shield:levelup/energy/viper_energy
+execute as @s[predicate=amr-shield:shields/wooden] run function amr-shield:levelup/energy/wooden_energy
+execute as @s[predicate=amr-shield:shields/dog] run function amr-shield:levelup/energy/dog_energy
+execute as @s[predicate=amr-shield:shields/pipe] run function amr-shield:levelup/energy/pipe_energy
+execute as @s[predicate=amr-shield:shields/portal] run function amr-shield:levelup/energy/portal_energy

@@ -1,0 +1,61 @@
+[
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.max_health",
+        "name": "amr.shield.dog.m.mh",
+        "amount": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "amr.shield.dogprof",
+          "scale": 0.005
+        },
+        "operation": "multiply_base",
+        "id": "f7b675c2-9254-49a2-9790-c8710e2b207f",
+        "slot": "mainhand"
+      },
+      {
+        "attribute": "minecraft:generic.armor_toughness",
+        "name": "amr.shield.dog.m.at",
+        "amount": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "amr.shield.dogprof",
+          "scale": 0.005
+        },
+        "operation": "multiply_base",
+        "id": "15082ab0-735a-4aa4-9fbe-09ca313ad522",
+        "slot": "mainhand"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "type": "minecraft:player",
+          "type_specific": {
+            "type": "player"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "mastery level: "
+      },
+      {
+        "score": {
+          "name": "@s",
+          "objective": "amr.shield.dogprof"
+        }
+      }
+    ],
+    "replace": false
+  }
+]

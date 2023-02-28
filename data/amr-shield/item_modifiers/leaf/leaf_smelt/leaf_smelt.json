@@ -1,0 +1,49 @@
+[
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.max_health",
+        "name": "amr.leaf.smelt.mh",
+        "amount": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "amr.shield.leaf.smelt",
+          "scale": 0.02
+        },
+        "operation": "multiply_base",
+        "id": "35e295cd-74e8-4199-84c7-c6de6a51713b",
+        "slot": [
+          "mainhand"
+        ]
+      },
+      {
+        "attribute": "minecraft:generic.luck",
+        "name": "amr.leaf.smelt.l",
+        "amount": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "amr.shield.leaf.smelt",
+          "scale": 0.01
+        },
+        "operation": "multiply_base",
+        "id": "1eed9d63-05e6-4c72-bc30-f545c479108f",
+        "slot": [
+          "mainhand"
+        ]
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "type": "minecraft:player",
+          "type_specific": {
+            "type": "player"
+          }
+        }
+      }
+    ]
+  }
+]

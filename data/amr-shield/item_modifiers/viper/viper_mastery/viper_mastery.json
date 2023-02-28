@@ -1,0 +1,61 @@
+[
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.max_health",
+        "name": "amr.shield.viper.m.mh",
+        "amount": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "amr.shield.viperprof",
+          "scale": 0.006
+        },
+        "operation": "multiply_base",
+        "id": "e7265af8-7ac7-4107-a55d-2862d9c28761",
+        "slot": "mainhand"
+      },
+      {
+        "attribute": "minecraft:generic.armor_toughness",
+        "name": "amr.shield.viper.m.at",
+        "amount": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "amr.shield.viperprof",
+          "scale": 0.006
+        },
+        "operation": "multiply_base",
+        "id": "71e6621e-77b9-4708-a970-d0ce9abc67c1",
+        "slot": "mainhand"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "type": "minecraft:player",
+          "type_specific": {
+            "type": "player"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "mastery level: "
+      },
+      {
+        "score": {
+          "name": "@s",
+          "objective": "amr.shield.viperprof"
+        }
+      }
+    ],
+    "replace": false
+  }
+]

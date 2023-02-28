@@ -1,0 +1,6 @@
+execute at @s if predicate amr-shield:rarityrate run summon item ^ ^1 ^3 {CustomNameVisible:1b,CustomName:'{"text":"Raw Gold","color":"#eacc48","bold":true}',Item:{id:"minecraft:raw_gold",Count:1b}}
+execute at @s[scores={amr.shield.pickprof=100}] if predicate amr-shield:rarityrate run summon item ^ ^1 ^3 {CustomNameVisible:1b,CustomName:'{"text":"Raw Gold","color":"#eacc48","bold":true}',Item:{id:"minecraft:raw_gold",Count:1b}}
+execute at @s[scores={amr.shield.pick.smelt=5..}] if predicate amr-shield:rarityrate run summon item ^ ^1 ^3 {CustomNameVisible:1b,CustomName:'{"text":"Raw Gold","color":"#eacc48","bold":true}',Item:{id:"minecraft:raw_gold",Count:1b}}
+execute at @s[scores={amr.shield.pick.rarity=1..}] if predicate amr-shield:rarityrate run summon item ^ ^1 ^3 {CustomNameVisible:1b,CustomName:'{"text":"Raw Gold","color":"#eacc48","bold":true}',Item:{id:"minecraft:raw_gold",Count:1b}}
+execute at @s[scores={amr.shield.pick.awakened=1..}] if predicate amr-shield:smeltrate run summon item ^ ^1 ^3 {CustomNameVisible:1b,CustomName:'{"text":"Raw Gold","color":"#eacc48","bold":true}',Item:{id:"minecraft:raw_gold",Count:1b}}
+execute at @s if predicate amr-shield:rarityrate run summon item ^ ^1 ^3 {CustomNameVisible:1b,CustomName:'{"text":"Blaze Powder","color":"ffeb93","bold":true}',Item:{id:"minecraft:blaze_powder",Count:1b}}

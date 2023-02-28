@@ -1,0 +1,36 @@
+[
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.max_health",
+        "name": "amr.shield.leaf.aw.mh",
+        "amount": 0.25,
+        "operation": "multiply_base",
+        "id": "518c02e9-e602-4eac-b5f8-d114a0e43ce2",
+        "slot": "mainhand"
+      },
+      {
+        "attribute": "minecraft:generic.movement_speed",
+        "name": "amr.shield.leaf.aw.ms",
+        "amount": 0.25,
+        "operation": "multiply_base",
+        "id": "efb4b34b-cb02-494e-837e-39831e6c636c",
+        "slot": "mainhand"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "Awakened",
+        "color": "#15eabc",
+        "bold": false,
+        "italic": false
+      }
+    ],
+    "replace": false
+  }
+]

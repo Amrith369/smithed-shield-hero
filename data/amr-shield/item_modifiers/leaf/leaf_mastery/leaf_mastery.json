@@ -1,0 +1,61 @@
+[
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.max_health",
+        "name": "amr.shield.leaf.m.mh",
+        "amount": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "amr.shield.leafprof",
+          "scale": 0.005
+        },
+        "operation": "multiply_base",
+        "id": "af043d7b-361a-48bf-b1fb-7160d34224ee",
+        "slot": "mainhand"
+      },
+      {
+        "attribute": "minecraft:generic.luck",
+        "name": "amr.shield.leaf.m.l",
+        "amount": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "amr.shield.leafprof",
+          "scale": 0.005
+        },
+        "operation": "multiply_base",
+        "id": "9e08e4a6-6b27-4a2c-a88e-ba1f151a8719",
+        "slot": "mainhand"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "type": "minecraft:player",
+          "type_specific": {
+            "type": "player"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "mastery level: "
+      },
+      {
+        "score": {
+          "name": "@s",
+          "objective": "amr.shield.leafprof"
+        }
+      }
+    ],
+    "replace": false
+  }
+]

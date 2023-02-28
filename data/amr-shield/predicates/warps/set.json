@@ -1,0 +1,22 @@
+[
+  {
+    "condition": "minecraft:entity_scores",
+    "entity": "this",
+    "scores": {
+      "amr.skill.shield.set.warp.b": {
+        "min": 1,
+        "max": 999
+      }
+    }
+  },
+  {
+    "condition": "minecraft:entity_scores",
+    "entity": "this",
+    "scores": {
+      "amr.skill.shield.set.warp.a": {
+        "min": 1,
+        "max": 999
+      }
+    }
+  }
+]

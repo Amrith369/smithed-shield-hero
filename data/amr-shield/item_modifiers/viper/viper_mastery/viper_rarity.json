@@ -1,0 +1,45 @@
+[
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.max_health",
+        "name": "amr.shield.viper.r.mh",
+        "amount": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "amr.shield.viper.rarity",
+          "scale": 0.25
+        },
+        "operation": "multiply_base",
+        "id": "00acdb17-c9c3-4d35-a8d7-6e6d0c273487",
+        "slot": "mainhand"
+      },
+      {
+        "attribute": "minecraft:generic.armor_toughness",
+        "name": "amr.shield.viper.r.at",
+        "amount": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "amr.shield.viper.rarity",
+          "scale": 0.25
+        },
+        "operation": "multiply_base",
+        "id": "c35ed869-39fa-4489-ba74-f40ecc453482",
+        "slot": "mainhand"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "type": "minecraft:player",
+          "type_specific": {
+            "type": "player"
+          }
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,36 @@
+[
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.max_health",
+        "name": "amr.shield.aw.mh",
+        "amount": 0.25,
+        "operation": "multiply_total",
+        "id": "d79e6ce1-9a10-49e1-b6ab-d067c2676ffc",
+        "slot": "mainhand"
+      },
+      {
+        "attribute": "minecraft:generic.armor_toughness",
+        "name": "amr.shield.aw.at",
+        "amount": 0.25,
+        "operation": "multiply_base",
+        "id": "78a58aea-793a-4b47-9acf-99dbb4e8d34f",
+        "slot": "mainhand"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "Awakened",
+        "color": "#15eabc",
+        "bold": false,
+        "italic": false
+      }
+    ],
+    "replace": false
+  }
+]

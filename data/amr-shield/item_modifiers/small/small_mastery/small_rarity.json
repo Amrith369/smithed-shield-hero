@@ -1,0 +1,45 @@
+[
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.max_health",
+        "name": "amr.shield.small.r.mh",
+        "amount": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "amr.shield.small.rarity",
+          "scale": 0.2
+        },
+        "operation": "multiply_base",
+        "id": "94b2a1cc-e607-4e4a-a798-22c7f6b23dbd",
+        "slot": "mainhand"
+      },
+      {
+        "attribute": "minecraft:generic.armor",
+        "name": "amr.shield.small.r.a",
+        "amount": {
+          "type": "minecraft:score",
+          "target": "this",
+          "score": "amr.shield.small.rarity",
+          "scale": 0.2
+        },
+        "operation": "multiply_base",
+        "id": "1cfcd22e-2b02-484c-b0ca-d7143d00e722",
+        "slot": "mainhand"
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "type": "minecraft:player",
+          "type_specific": {
+            "type": "player"
+          }
+        }
+      }
+    ]
+  }
+]

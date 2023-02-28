@@ -1,0 +1,172 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "text": "Pickax Shield 0/10 C +",
+        "color": "gold",
+        "bold": true
+      },
+      {
+        "score": {
+          "name": "@s",
+          "objective": "amr.shield.pick.smelt",
+          "value": "@s"
+        },
+        "color": "gold",
+        "bold": true,
+        "italic": true
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "amr.shield.pick.smelt": {
+            "min": 1,
+            "max": 999
+          },
+          "amr.shield.pick.rarity": 0
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "text": "Pickax Shield 0/10 UC +",
+        "color": "gold",
+        "bold": true
+      },
+      {
+        "score": {
+          "name": "@s",
+          "objective": "amr.shield.pick.smelt",
+          "value": "@s"
+        },
+        "color": "gold",
+        "bold": true,
+        "italic": true
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "amr.shield.pick.smelt": {
+            "min": 1,
+            "max": 999
+          },
+          "amr.shield.pick.rarity": 1
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "text": "Pickax Shield 0/10 R +",
+        "color": "gold",
+        "bold": true
+      },
+      {
+        "score": {
+          "name": "@s",
+          "objective": "amr.shield.pick.smelt",
+          "value": "@s"
+        },
+        "color": "gold",
+        "bold": true,
+        "italic": true
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "amr.shield.pick.smelt": {
+            "min": 1,
+            "max": 999
+          },
+          "amr.shield.pick.rarity": 2
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "text": "Pickax Shield 0/10 SR +",
+        "color": "gold",
+        "bold": true
+      },
+      {
+        "score": {
+          "name": "@s",
+          "objective": "amr.shield.pick.smelt",
+          "value": "@s"
+        },
+        "color": "gold",
+        "bold": true,
+        "italic": true
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "amr.shield.pick.smelt": {
+            "min": 1,
+            "max": 999
+          },
+          "amr.shield.pick.rarity": 3
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "text": "Pickax Shield 0/10 AR +",
+        "color": "gold",
+        "bold": true
+      },
+      {
+        "score": {
+          "name": "@s",
+          "objective": "amr.shield.pick.smelt",
+          "value": "@s"
+        },
+        "color": "gold",
+        "bold": true,
+        "italic": true
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "amr.shield.pick.smelt": {
+            "min": 1,
+            "max": 999
+          },
+          "amr.shield.pick.rarity": 4
+        }
+      }
+    ]
+  }
+]

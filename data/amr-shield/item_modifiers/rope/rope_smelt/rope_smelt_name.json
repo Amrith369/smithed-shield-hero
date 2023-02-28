@@ -1,0 +1,172 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "text": "Rope Shield 0/10 C +",
+        "color": "gold",
+        "bold": true
+      },
+      {
+        "score": {
+          "name": "@s",
+          "objective": "amr.shield.rope.smelt",
+          "value": "@s"
+        },
+        "color": "gold",
+        "bold": true,
+        "italic": true
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "amr.shield.rope.smelt": {
+            "min": 1,
+            "max": 999
+          },
+          "amr.shield.rope.rarity": 0
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "text": "Rope Shield 0/10 UC +",
+        "color": "gold",
+        "bold": true
+      },
+      {
+        "score": {
+          "name": "@s",
+          "objective": "amr.shield.rope.smelt",
+          "value": "@s"
+        },
+        "color": "gold",
+        "bold": true,
+        "italic": true
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "amr.shield.rope.smelt": {
+            "min": 1,
+            "max": 999
+          },
+          "amr.shield.rope.rarity": 1
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "text": "Rope Shield 0/10 R +",
+        "color": "gold",
+        "bold": true
+      },
+      {
+        "score": {
+          "name": "@s",
+          "objective": "amr.shield.rope.smelt",
+          "value": "@s"
+        },
+        "color": "gold",
+        "bold": true,
+        "italic": true
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "amr.shield.rope.smelt": {
+            "min": 1,
+            "max": 999
+          },
+          "amr.shield.rope.rarity": 2
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "text": "Rope Shield 0/10 SR +",
+        "color": "gold",
+        "bold": true
+      },
+      {
+        "score": {
+          "name": "@s",
+          "objective": "amr.shield.rope.smelt",
+          "value": "@s"
+        },
+        "color": "gold",
+        "bold": true,
+        "italic": true
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "amr.shield.rope.smelt": {
+            "min": 1,
+            "max": 999
+          },
+          "amr.shield.rope.rarity": 3
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "text": "Rope Shield 0/10 AR +",
+        "color": "gold",
+        "bold": true
+      },
+      {
+        "score": {
+          "name": "@s",
+          "objective": "amr.shield.rope.smelt",
+          "value": "@s"
+        },
+        "color": "gold",
+        "bold": true,
+        "italic": true
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "amr.shield.rope.smelt": {
+            "min": 1,
+            "max": 999
+          },
+          "amr.shield.rope.rarity": 4
+        }
+      }
+    ]
+  }
+]

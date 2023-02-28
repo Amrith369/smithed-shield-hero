@@ -1,0 +1,172 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "text": "Wooden Shield 0/5 C +",
+        "color": "gold",
+        "bold": true
+      },
+      {
+        "score": {
+          "name": "@s",
+          "objective": "amr.shield.wooden.smelt",
+          "value": "@s"
+        },
+        "color": "gold",
+        "bold": true,
+        "italic": true
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "amr.shield.wooden.smelt": {
+            "min": 1,
+            "max": 999
+          },
+          "amr.shield.wooden.rarity": 0
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "text": "Wooden Shield 0/5 UC +",
+        "color": "gold",
+        "bold": true
+      },
+      {
+        "score": {
+          "name": "@s",
+          "objective": "amr.shield.wooden.smelt",
+          "value": "@s"
+        },
+        "color": "gold",
+        "bold": true,
+        "italic": true
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "amr.shield.wooden.smelt": {
+            "min": 1,
+            "max": 999
+          },
+          "amr.shield.wooden.rarity": 1
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "text": "Wooden Shield 0/5 R +",
+        "color": "gold",
+        "bold": true
+      },
+      {
+        "score": {
+          "name": "@s",
+          "objective": "amr.shield.wooden.smelt",
+          "value": "@s"
+        },
+        "color": "gold",
+        "bold": true,
+        "italic": true
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "amr.shield.wooden.smelt": {
+            "min": 1,
+            "max": 999
+          },
+          "amr.shield.wooden.rarity": 2
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "text": "Wooden Shield 0/5 SR +",
+        "color": "gold",
+        "bold": true
+      },
+      {
+        "score": {
+          "name": "@s",
+          "objective": "amr.shield.wooden.smelt",
+          "value": "@s"
+        },
+        "color": "gold",
+        "bold": true,
+        "italic": true
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "amr.shield.wooden.smelt": {
+            "min": 1,
+            "max": 999
+          },
+          "amr.shield.wooden.rarity": 3
+        }
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": [
+      {
+        "text": "Wooden Shield 0/5 AR +",
+        "color": "gold",
+        "bold": true
+      },
+      {
+        "score": {
+          "name": "@s",
+          "objective": "amr.shield.wooden.smelt",
+          "value": "@s"
+        },
+        "color": "gold",
+        "bold": true,
+        "italic": true
+      }
+    ],
+    "conditions": [
+      {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+          "amr.shield.wooden.smelt": {
+            "min": 1,
+            "max": 999
+          },
+          "amr.shield.wooden.rarity": 4
+        }
+      }
+    ]
+  }
+]

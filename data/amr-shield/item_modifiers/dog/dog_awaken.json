@@ -1,0 +1,36 @@
+[
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.max_health",
+        "name": "amr.shield.dog.aw.mh",
+        "amount": 0.23,
+        "operation": "multiply_base",
+        "id": "9be1308d-4f50-45e1-8b52-f21007e62a34",
+        "slot": "mainhand"
+      },
+      {
+        "attribute": "minecraft:generic.armor_toughness",
+        "name": "amr.shield.dog.aw.at",
+        "amount": 0.23,
+        "operation": "multiply_base",
+        "id": "360ac647-eb7d-4dbc-94ea-ed38734696f4",
+        "slot": "mainhand"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      {
+        "text": "Awakened",
+        "color": "#15eabc",
+        "bold": false,
+        "italic": false
+      }
+    ],
+    "replace": false
+  }
+]
