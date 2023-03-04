@@ -1,5 +1,6 @@
 tellraw @s[scores={amr.shield.g=..4999}] {"text":"<Rarity> Not Enough G To Guarantee Rarity Increase","bold":true,"color":"red","hoverEvent":{"action":"show_text","contents":[{"text":"Insufficient G","italic":true,"color":"dark_purple"}]}}
 scoreboard players set @s[scores={amr.shield.g=..4999}] amr.shield.hud.g.increase.rarity 0
+scoreboard players set @a[predicate=amr-shield:shields/whale,scores={amr.shield.whale.rarity=4}] amr.shield.hud.g.increase.rarity 0
 scoreboard players set @a[predicate=amr-shield:shields/portal,scores={amr.shield.portal.rarity=4}] amr.shield.hud.g.increase.rarity 0
 scoreboard players set @a[predicate=amr-shield:shields/pipe,scores={amr.shield.pipe.rarity=4}] amr.shield.hud.g.increase.rarity 0
 scoreboard players set @a[predicate=amr-shield:shields/dog,scores={amr.shield.dog.rarity=4}] amr.shield.hud.g.increase.rarity 0

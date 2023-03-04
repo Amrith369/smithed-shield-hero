@@ -31,7 +31,7 @@ execute at @e[type=item,nbt={Item:{id:"minecraft:shield"}}] run execute as @a[di
 ############################################################
 ################# START ####################################
 ############################################################
-execute as @a[tag=amr.shield] run give @s[tag=!amr.starto,tag=!amr.hero] minecraft:shield{display:{Name:'{"text":"Legendary Shield","color":"gold","bold":true}',Lore:['{"text":"-Abilities Unlocked-","italic":true}','{"text":"Equip Bonus: defense 3"}']},HideFlags:1,ctc:{id:"amr-shield:legendary_shield",traits:{"tool/weapon":1b,"shield_hero":1b}},Unbreakable:1b,CustomModelData:369001,AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:3,Operation:0,UUIDLeast:790722,UUIDMost:572480,Slot:"mainhand"}]} 1
+execute as @a[tag=amr.shield] run give @s[tag=!amr.starto,tag=!amr.hero] minecraft:shield{display:{Name:'{"text":"Legendary Shield","color":"gold","bold":true}',Lore:['{"text":"-Abilities Unlocked-","italic":true}','{"text":"Equip Bonus: defense 3"}']},HideFlags:1,smithed:{id:small_shield,dict:{item:{weapon:1b,shield_hero:1b}}},Unbreakable:1b,CustomModelData:369001,AttributeModifiers:[{AttributeName:"generic.armor",Name:"generic.armor",Amount:3,Operation:0,UUIDLeast:790722,UUIDMost:572480,Slot:"mainhand"}]} 1
 execute as @a[tag=amr.shield] run tellraw @s[tag=!amr.starto,tag=!amr.hero] ["",{"text":"You have become the "},{"text":"Shield Hero","color":"green"}]
 attribute @a[limit=1,tag=amr.shield,tag=!amr.starto] minecraft:generic.attack_damage base set -10
 attribute @a[limit=1,tag=amr.shield,tag=!amr.starto] minecraft:generic.max_health base set 40
@@ -83,8 +83,8 @@ advancement grant @a[tag=amr.shield,scores={amr.shield.absorb=1..},nbt={Inventor
 tellraw @a[tag=amr.shield,scores={amr.shield.absorb=1..},advancements={amr-shield:shields/portal=false},nbt={Inventory:[{id:"minecraft:redstone"}]}] {"text":"Dragon Hourglass Sand Shield: conditions met","italic":true,"color":"gold"}
 advancement grant @a[tag=amr.shield,scores={amr.shield.absorb=1..},nbt={Inventory:[{id:"minecraft:redstone"}]}] only amr-shield:shields/portal
 #-Whale Shield
-tellraw @a[tag=amr.shield,scores={amr.shield.absorb=1..},advancements={amr-shield:shields/whale=false},nbt={Inventory:[{id:"minecraft:heart_of_the_sea"}]}] {"text":"Whale Magic Core Shield: conditions met","italic":true,"color":"gold"}
-advancement grant @a[tag=amr.shield,scores={amr.shield.absorb=1..},nbt={Inventory:[{id:"minecraft:heart_of_the_sea"}]}] only amr-shield:shields/whale
+tellraw @a[tag=amr.shield,advancements={amr-shield:shields/whale=false},predicate=amr-shield:unlocks/whale] {"text":"Whale Magic Core Shield: conditions met","italic":true,"color":"gold"}
+advancement grant @a[tag=amr.shield,predicate=amr-shield:unlocks/whale] only amr-shield:shields/whale
 ############################################################
 ################# WEAPON COPY ##############################
 ############################################################
@@ -151,6 +151,12 @@ execute as @a[tag=amr.shield,scores={amr.change.shield.portal=1..}] run tellraw 
 #title @a[tag=amr.shield,scores={amr.change.shield.portal=1..}] title {"text":"\uE366"}
 execute at @a[tag=amr.shield,scores={amr.change.shield.portal=1..}] run particle minecraft:totem_of_undying ^ ^2 ^1 0.1 0.1 0.1 0.01 10
 execute as @a[tag=amr.shield,scores={amr.change.shield.portal=1..}] run function amr-shield:weapons/portal
+############################################################
+execute at @e[type=item,nbt={Item:{id:"minecraft:shield"}}] run execute as @a[distance=0..4,tag=amr.shield,scores={amr.shield.select=1..}] run tellraw @s[advancements={amr-shield:shields/whale=true}] {"text":"Whale Magic Core Shield","bold":true,"color":"#6ce2e2","clickEvent":{"action":"run_command","value":"/trigger amr.change.shield.whale add 1"}}
+execute as @a[tag=amr.shield,scores={amr.change.shield.whale=1..}] run tellraw @s {"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}
+#title @a[tag=amr.shield,scores={amr.change.shield.whale=1..}] title {"text":"\uE364"}
+execute at @a[tag=amr.shield,scores={amr.change.shield.whale=1..}] run particle minecraft:totem_of_undying ^ ^2 ^1 0.1 0.1 0.1 0.01 10
+execute as @a[tag=amr.shield,scores={amr.change.shield.whale=1..}] run function amr-shield:weapons/whale
 ############################################################
 ################# EFFECTS/SKILLS ###########################
 ############################################################
@@ -222,6 +228,9 @@ execute as @a[tag=amr.shield,predicate=amr-shield:shields/portal,scores={amr.ski
 execute as @a[tag=amr.shield,predicate=amr-shield:shields/portal,scores={amr.skill.shield.warp.d=1..}] run function amr-shield:skills/portal/warptotest
 execute as @a[tag=amr.shield,predicate=amr-shield:shields/portal,scores={amr.skill.shield.warp.e=1..}] run function amr-shield:skills/portal/warptotest
 execute as @a[tag=amr.shield,predicate=amr-shield:shields/portal,scores={amr.skill.shield.warp.f=1..}] run function amr-shield:skills/portal/warptotest
+################# WHALE #####################################
+execute as @a[tag=amr.shield,predicate=amr-shield:shields/whale] run function amr-shield:levelup/prof/whale
+execute as @a[tag=amr.shield,predicate=amr-shield:shields/whale-offhand] run function amr-shield:levelup/prof/whale
 ############################################################
 ################# GOLD TRANSFER ############################
 ############################################################
@@ -246,6 +255,7 @@ execute as @a[tag=amr.shield,scores={amr.shield.g.smelt=1..},predicate=amr-shiel
 execute as @a[tag=amr.shield,scores={amr.shield.g.smelt=1..},predicate=amr-shield:shield-smelts/wooden-smelt] run function amr-shield:levelup/smelt/gsmelt
 execute as @a[tag=amr.shield,scores={amr.shield.g.smelt=1..},predicate=amr-shield:shield-smelts/dog-smelt] run function amr-shield:levelup/smelt/gsmelt
 execute as @a[tag=amr.shield,scores={amr.shield.g.smelt=1..},predicate=amr-shield:shield-smelts/portal-smelt] run function amr-shield:levelup/smelt/gsmelt
+execute as @a[tag=amr.shield,scores={amr.shield.g.smelt=1..},predicate=amr-shield:shield-smelts/whale-smelt] run function amr-shield:levelup/smelt/gsmelt
 execute as @a[tag=amr.shield,scores={amr.shield.small.smelt=..999,amr.shield.smelt=1..},predicate=amr-shield:shield-smelts/small-smelt] run execute store success score amr.shield.smeltnumber amr.shield.smeltsuccess if predicate amr-shield:smeltrate
 execute as @a[tag=amr.shield,scores={amr.shield.small.smelt=..999,amr.shield.smelt=1..},predicate=amr-shield:shield-smelts/small-smelt] run function amr-shield:levelup/smelt/small-smelt
 execute as @a[tag=amr.shield,scores={amr.shield.leaf.smelt=..999,amr.shield.smelt=1..},predicate=amr-shield:shield-smelts/leaf-smelt] run execute store success score amr.shield.smeltnumber amr.shield.smeltsuccess if predicate amr-shield:smeltrate
@@ -266,6 +276,8 @@ execute as @a[tag=amr.shield,scores={amr.shield.pipe.smelt=..999,amr.shield.smel
 execute as @a[tag=amr.shield,scores={amr.shield.pipe.smelt=..999,amr.shield.smelt=1..},predicate=amr-shield:shield-smelts/pipe-smelt] run function amr-shield:levelup/smelt/pipe-smelt
 execute as @a[tag=amr.shield,scores={amr.shield.portal.smelt=..999,amr.shield.smelt=1..},predicate=amr-shield:shield-smelts/portal-smelt] run execute store success score amr.shield.smeltnumber amr.shield.smeltsuccess if predicate amr-shield:smeltrate
 execute as @a[tag=amr.shield,scores={amr.shield.portal.smelt=..999,amr.shield.smelt=1..},predicate=amr-shield:shield-smelts/portal-smelt] run function amr-shield:levelup/smelt/portal-smelt
+execute as @a[tag=amr.shield,scores={amr.shield.whale.smelt=..999,amr.shield.smelt=1..},predicate=amr-shield:shield-smelts/whale-smelt] run execute store success score amr.shield.smeltnumber amr.shield.smeltsuccess if predicate amr-shield:smeltrate
+execute as @a[tag=amr.shield,scores={amr.shield.whale.smelt=..999,amr.shield.smelt=1..},predicate=amr-shield:shield-smelts/whale-smelt] run function amr-shield:levelup/smelt/whale-smelt
 ############################################################
 ################# RARITY UP ################################
 ############################################################
@@ -300,6 +312,9 @@ execute as @a[scores={amr.shield.pipe.rarity=..3,amr.shield.hud.increase.rarity=
 execute as @a[scores={amr.shield.portal.rarity=..3,amr.shield.hud.increase.rarity=1..,amr.shield.energy.points=4000..},predicate=amr-shield:shields/portal] run execute store success score amr.shield.rarenumber amr.shield.raritysuccess if predicate amr-shield:rarityrate
 execute as @a[scores={amr.shield.portal.rarity=..3,amr.shield.hud.increase.rarity=1..,amr.shield.energy.points=4000..},predicate=amr-shield:shields/portal] run function amr-shield:levelup/rarityup/portal
 ############################################################
+execute as @a[scores={amr.shield.whale.rarity=..3,amr.shield.hud.increase.rarity=1..,amr.shield.energy.points=4000..},predicate=amr-shield:shields/whale] run execute store success score amr.shield.rarenumber amr.shield.raritysuccess if predicate amr-shield:rarityrate
+execute as @a[scores={amr.shield.whale.rarity=..3,amr.shield.hud.increase.rarity=1..,amr.shield.energy.points=4000..},predicate=amr-shield:shields/whale] run function amr-shield:levelup/rarityup/whale
+############################################################
 ################# AWAKENING ################################
 ############################################################
 execute as @a[tag=amr.shield,scores={amr.shield.hud.awaken=1..,amr.shield.energy.points=4000..}] run function amr-shield:levelup/awaken/awaken
@@ -317,6 +332,7 @@ scoreboard players enable @a[tag=amr.shield,advancements={amr-shield:shields/woo
 scoreboard players enable @a[tag=amr.shield,advancements={amr-shield:shields/dog=true}] amr.change.shield.dog
 scoreboard players enable @a[tag=amr.shield,advancements={amr-shield:shields/pipe=true}] amr.change.shield.pipe
 scoreboard players enable @a[tag=amr.shield,advancements={amr-shield:shields/portal=true}] amr.change.shield.portal
+scoreboard players enable @a[tag=amr.shield,advancements={amr-shield:shields/whale=true}] amr.change.shield.whale
 scoreboard players enable @a[tag=amr.shield,advancements={amr-shield:shields/portal=true}] amr.skill.shield.set.warp.a
 scoreboard players enable @a[tag=amr.shield,advancements={amr-shield:shields/portal=true}] amr.skill.shield.set.warp.b
 scoreboard players enable @a[tag=amr.shield,advancements={amr-shield:shields/portal=true}] amr.skill.shield.set.warp.c

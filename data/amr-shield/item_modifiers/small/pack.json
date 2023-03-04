@@ -1,0 +1,19 @@
+{
+  "function": "minecraft:set_lore",
+  "entity": "this",
+  "lore": [
+    {
+      "text": "Rising of the Shield Hero",
+      "color": "#21FFAE",
+      "italic": true,
+      "hoverEvent": {
+        "action": "show_text",
+        "value": {
+          "text": "Shield Hero Datapack",
+          "color": "#21FFAE"
+        }
+      }
+    }
+  ],
+  "replace": false
+}

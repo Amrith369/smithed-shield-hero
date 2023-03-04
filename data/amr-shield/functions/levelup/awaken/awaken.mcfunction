@@ -27,3 +27,6 @@ execute as @s[predicate=amr-shield:shields/pipe,scores={amr.shield.pipe.awakened
 ####################################################################################
 execute as @s[predicate=amr-shield:shields/portal,scores={amr.shield.portal.awakened=1}] run tellraw @s {"text":"<System> Weapon Is Already Awakened!","bold":true,"color":"#37D7D7","hoverEvent":{"action":"show_text","contents":[{"text":"Item Awakened","italic":true,"color":"dark_purple"}]}}
 execute as @s[predicate=amr-shield:shields/portal,scores={amr.shield.portal.awakened=0}] run function amr-shield:levelup/awaken/portal
+####################################################################################
+execute as @s[predicate=amr-shield:shields/whale,scores={amr.shield.whale.awakened=1}] run tellraw @s {"text":"<System> Weapon Is Already Awakened!","bold":true,"color":"#37D7D7","hoverEvent":{"action":"show_text","contents":[{"text":"Item Awakened","italic":true,"color":"dark_purple"}]}}
+execute as @s[predicate=amr-shield:shields/whale,scores={amr.shield.whale.awakened=0}] run function amr-shield:levelup/awaken/whale

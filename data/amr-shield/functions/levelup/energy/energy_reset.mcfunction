@@ -8,3 +8,4 @@ execute as @s[predicate=amr-shield:shields/wooden] run function amr-shield:level
 execute as @s[predicate=amr-shield:shields/dog] run function amr-shield:levelup/energy/dog_energy
 execute as @s[predicate=amr-shield:shields/pipe] run function amr-shield:levelup/energy/pipe_energy
 execute as @s[predicate=amr-shield:shields/portal] run function amr-shield:levelup/energy/portal_energy
+execute as @s[predicate=amr-shield:shields/whale] run function amr-shield:levelup/energy/whale_energy

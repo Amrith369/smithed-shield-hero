@@ -1,4 +1,8 @@
 ####################### BASIC #########################
+scoreboard objectives add amr.shield.stat.atk dummy
+scoreboard objectives add amr.shield.stat.hp dummy
+scoreboard objectives add amr.shield.stat.armor dummy
+scoreboard objectives add amr.shield.stat.armor.toughness dummy
 scoreboard objectives add amr.shield.sp dummy
 scoreboard objectives add amr.shield.sp.max dummy
 scoreboard objectives add amr.shield.energy.points dummy
@@ -69,6 +73,7 @@ scoreboard objectives add amr.shield.wooden.rarity dummy
 scoreboard objectives add amr.shield.dog.rarity dummy
 scoreboard objectives add amr.shield.pipe.rarity dummy
 scoreboard objectives add amr.shield.portal.rarity dummy
+scoreboard objectives add amr.shield.whale.rarity dummy
 ####################### AWAKENING #####################
 scoreboard objectives add amr.shield.small.awakened dummy
 scoreboard objectives add amr.shield.leaf.awakened dummy
@@ -80,6 +85,7 @@ scoreboard objectives add amr.shield.wooden.awakened dummy
 scoreboard objectives add amr.shield.dog.awakened dummy
 scoreboard objectives add amr.shield.pipe.awakened dummy
 scoreboard objectives add amr.shield.portal.awakened dummy
+scoreboard objectives add amr.shield.whale.awakened dummy
 ####################### WEAPON SWITCH #################
 scoreboard objectives add amr.change.shield.small trigger
 scoreboard objectives add amr.change.shield.leaf trigger
