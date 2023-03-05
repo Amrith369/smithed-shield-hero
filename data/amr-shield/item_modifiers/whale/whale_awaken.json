@@ -25,6 +25,16 @@
     "entity": "this",
     "lore": [
       {
+        "text": "special equip effect: water",
+        "bold": false,
+        "italic": false
+      },
+      {
+        "text": "element heat beam shield (medium)",
+        "bold": false,
+        "italic": false
+      },
+      {
         "text": "Awakened",
         "color": "#15eabc",
         "bold": false,

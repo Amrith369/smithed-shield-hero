@@ -231,6 +231,8 @@ execute as @a[tag=amr.shield,predicate=amr-shield:shields/portal,scores={amr.ski
 ################# WHALE #####################################
 execute as @a[tag=amr.shield,predicate=amr-shield:shields/whale] run function amr-shield:levelup/prof/whale
 execute as @a[tag=amr.shield,predicate=amr-shield:shields/whale-offhand] run function amr-shield:levelup/prof/whale
+execute as @a[tag=amr.shield,predicate=amr-shield:shields/whale,scores={amr.shield.block=1..,amr.shield.whale.awakened=1..}] run function amr-shield:skills/whale/heat-beam
+execute as @a[tag=amr.shield,predicate=amr-shield:shields/whale] run function amr-shield:skills/whale/bubble
 ############################################################
 ################# GOLD TRANSFER ############################
 ############################################################
