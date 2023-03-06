@@ -7,7 +7,7 @@
         "items": [
           "minecraft:fern"
         ],
-        "nbt": "{ctc:{traits:{\"shield_hero\":1b}}}"
+        "nbt": "{smithed:{dict:{item:{shield_hero:1b}}}}"
       }
     }
   }

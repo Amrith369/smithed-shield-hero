@@ -17,6 +17,8 @@ scoreboard players set @a[tag=amr.shield,scores={amr.shield.counter=601}] amr.sh
 execute as @a[tag=amr.shield,scores={amr.shield.craft.sp.potion=1..},predicate=amr-shield:blaze_powder] run function amr-shield:crafting/soulsoothing
 execute as @a[tag=amr.shield,predicate=amr-shield:ssp] if score @s amr.shield.sp < @s amr.shield.sp.max run scoreboard players add @s amr.shield.sp 50
 clear @a[tag=amr.shield,predicate=amr-shield:ssp] glass_bottle 1
+execute as @a[tag=amr.shield,scores={amr.shield.craft.hp.potion=1..},predicate=amr-shield:herb] run function amr-shield:crafting/healthsoothing
+clear @a[tag=amr.shield,predicate=amr-shield:shp] glass_bottle 1
 ############################################################
 execute as @a[tag=amr.shield,scores={amr.shield.craft.hp.potion=1..},predicate=amr-shield:herb] run function amr-shield:crafting/healthsoothing
 clear @a[tag=amr.shield,predicate=amr-shield:hsp] glass_bottle 1
